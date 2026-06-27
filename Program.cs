@@ -6,6 +6,7 @@
 
 //using System.Diagnostics;
 //using System.Threading.Tasks;
+using ConsoleApp2;
 
 Console.WriteLine();
 Console.WriteLine(args); // prints: System.String[]
@@ -18,27 +19,9 @@ foreach (var arg in args)
 }
 Console.WriteLine();
 
-// thinking animation ...
-for (int i = 0; i < 20; i++)
-{
-    Console.Write("| -");
-    await Task.Delay(50);
-    Console.Write("\b\b\b");
+// I'm - thinking animation
+await ConsoleApp2.Utilities.ShowConsoleAnimation();
 
-    Console.Write("/ \\");
-    await Task.Delay(50);
-    Console.Write("\b\b\b");
-
-    Console.Write("- |");
-    await Task.Delay(50);
-    Console.Write("\b\b\b");
-
-    Console.Write("\\ /");
-    await Task.Delay(50);
-    Console.Write("\b\b\b");
-}
-
-Console.WriteLine();
 string[] answers =
 [
     "It is certain.",       "Reply hazy, try again.",     "Don’t count on it.",
